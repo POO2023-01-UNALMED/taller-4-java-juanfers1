@@ -2,7 +2,7 @@ package classroom;
 
 public class Persona {
 
-    /*final*/ long cedula = 3;
+    /*final*/ long cedula = 1; // El codigo exige que sea 1
     String nombre;
     static int totalPersonas;
     
