@@ -2,13 +2,19 @@ package classroom;
 
 public class Persona {
 
-    final long cedula;
+    /*final*/ long cedula = 3;
     String nombre;
     static int totalPersonas;
     
     static {
-        totalPersonas = 0;
-        cedula = 3;
+        totalPersonas = 0; // Esto es un bloque de inicialización estático
+        //cedula = 3;
+    }
+
+    public Persona() {
+        cedula = 0;
+        this.nombre = "";
+        totalPersonas++;
     }
 
     public Persona(long cedula, String nombre) {

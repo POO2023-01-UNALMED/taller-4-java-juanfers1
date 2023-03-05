@@ -10,11 +10,11 @@ public class Asignatura {
 
     public Asignatura() {
         this("Sin nombre",Tipo.FUNDAMENTACION);
-        this(0);
+        //this(0); Borré this(0) porque no se puede llamar a un constructor dentro de otro constructor
     }
 
-    public Asignatura(int codigoInterno,Tipo tipo) {
-        this("Sin nombre", codigoInterno, 0,tipo);
+    public Asignatura(double codigoInterno,Tipo tipo) {
+        this("Sin nombre", (int) codigoInterno, 0,tipo);
     }
 
     public Asignatura(int codigoExterno,Tipo tipo) {
@@ -39,8 +39,8 @@ public class Asignatura {
         this.tipo = tipo;
     }
 
-    public void cambiarDatos(int codigoInterno) {
-        this.codigoInterno = codigoInterno;
+    public void cambiarDatos(double codigoInterno) {
+        this.codigoInterno = (int) codigoInterno; //Casteo de double a int
     }
 
     public void cambiarDatos(int codigoExterno) {
